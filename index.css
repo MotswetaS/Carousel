@@ -10,30 +10,31 @@ body{
    place-items: center;
 
 }
-.carousel {
+.wrapper {
     max-width: 900px;
     position: relative;
     margin: 0 auto;
 }
 
-.carousel .carousel-item,
-.carousel .carousel-item-hidden {
+.wrapper .carousel-item,
+.wrapper .carousel-item-hidden {
     display: none; /* hide all slide images not currently being viewed */
 }
 
-.carousel .carousel-item-visible {
+.wrapper .carousel-item-visible {
     display: block; /* show current slide image */
     animation: fadeVisibility 0.5s; /* for fading effect when switching between slides */
 }
 
-.carousel .carousel-item img {
+.wrapper .carousel-item img {
     width: 100%;
     max-width: 900px;
     height: 500px;
+    object-fit: cover;
 }
 
 /* Navigation control styles */
-.carousel .carousel-actions {
+.wrapper .carousel-actions {
     display: flex;
     width: 100%;
     justify-content: space-between; /* put space between the navigation buttons */
@@ -42,7 +43,7 @@ body{
     transform: translateY(-50%); /* align navigation buttons */
 }
 
-.carousel .carousel-actions button {
+.wrapper .carousel-actions button {
     border-radius: 50px;
     background-color: rgb(161, 157, 157);
     border: 0;
@@ -53,11 +54,11 @@ body{
     height: 40px;
 }
 
-.carousel .carousel-actions button#carousel-button-prev {
+.wrapper .carousel-actions button#carousel-button-prev {
     margin-left: 20px; /* prevent previous button from touching the side*/
 }
 
-.carousel .carousel-actions button#carousel-button-next {
+.wrapper .carousel-actions button#carousel-button-next {
     margin-right: 20px;  /* prevent next button from touching the side*/
 }
 
